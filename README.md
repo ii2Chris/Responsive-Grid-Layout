@@ -17,15 +17,6 @@ Users can toggle layouts with a simple header control, showcasing how components
 
 ---
 
-## 🖼️ Preview
-Desktop | Tablet | Mobile
---- | --- | ---
-![Desktop Layout](./assets/desktop.png) | ![Tablet Layout](./assets/tablet.png) | ![Mobile Layout](./assets/mobile.png)
-
-*(Add screenshots after deployment.)*
-
----
-
 ## 🛠️ Tech Stack
 - **HTML5** – Semantic structure  
 - **CSS3** – Flexbox, Grid, animations, responsive design  
@@ -34,12 +25,14 @@ Desktop | Tablet | Mobile
 ---
 
 ## 📂 Project Structure
-├── index.html        # Main entry point
-├── script.js         # Handles layout toggle logic
-├── style.css         # Base styles + background
-├── header.css        # Header styling
-└── poster.css        # Grid / poster layout styling
-
+```txt
+responsive-grid-layout/
+├── index.html       # Main entry point
+├── script.js        # Handles layout toggle logic
+├── style.css        # Base styles + background
+├── header.css       # Header styling
+└── poster.css       # Grid / poster layout styling
+```
 --- 
 
 ## 📖 Learnings
@@ -49,8 +42,7 @@ Through this project, I practiced:
 - Implementing interactive UI with JavaScript
 - Deploying a static website online
 
---
+---
 
 ## 📜 License
-
 MIT License. Free to use and modify.
