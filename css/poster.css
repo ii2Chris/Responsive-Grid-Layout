@@ -1,0 +1,272 @@
+/* Base Styles */
+.poster {
+  width: 960px;
+  height: 600px;
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  background-color: rgba(51, 51, 51, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 1), 0 1px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  backdrop-filter: blur(8px);
+  transition: 0.5s ease;
+}
+
+/* Common Element Styles */
+a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+a:hover {
+  transform: scale(1.3);
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  z-index: 10;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Shine effect on hover */
+a:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine 0.75s;
+}
+
+/* Common Layout Styles */
+.poster-side-left,
+.poster-side-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+/* Desktop Layout */
+.left-top {
+  flex: 2;
+  display: flex;
+  gap: 4px;
+}
+
+.left-top-left {
+  flex: 1;
+  background: #495057;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.left-top-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.left-top-right-top,
+.left-top-right-bottom {
+  background: #868e96;
+}
+
+.left-bottom {
+  flex: 1;
+  background: #343a40;
+}
+
+.right-top {
+  flex: 1;
+  background: #343a40;
+  height: 33.33%;
+}
+
+.right-bottom {
+  flex: 2;
+  display: flex;
+  gap: 4px;
+  height: 66.66%;
+}
+
+.right-bottom-left {
+  flex: 1;
+  background: #495057;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.right-bottom-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.right-bottom-right-top,
+.right-bottom-right-middle,
+.right-bottom-right-bottom {
+  background: #868e96;
+}
+
+/* Tablet Layout */
+.poster.tablet-layout {
+  width: 760px;
+  height: 500px;
+}
+
+.tablet-layout .poster-side-left,
+.tablet-layout .poster-side-right {
+  gap: 6px;
+}
+
+.tablet-layout .left-top {
+  height: 66.66%;
+  flex-direction: column;
+}
+
+.tablet-layout .left-top-left {
+  flex: 2;
+  background: #7aa89f;
+}
+
+.tablet-layout .left-top-right {
+  flex: 1;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.tablet-layout a.left-top-right-top,
+.tablet-layout a.left-top-right-bottom {
+  flex: 1;
+  background: #829cab;
+}
+
+.tablet-layout a.left-bottom {
+  height: 33.33%;
+  background: #6d98ba;
+}
+
+.tablet-layout a.right-top {
+  height: 33.33%;
+  background: #6d98ba;
+}
+
+.tablet-layout .right-bottom {
+  height: 66.66%;
+  flex-direction: column;
+}
+
+.tablet-layout .right-bottom-left {
+  flex: 2;
+  background: #7aa89f;
+}
+
+.tablet-layout .right-bottom-right {
+  flex: 1;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.tablet-layout a.right-bottom-right-top,
+.tablet-layout a.right-bottom-right-middle,
+.tablet-layout a.right-bottom-right-bottom {
+  flex: 1;
+  background: #829cab;
+}
+
+/* Mobile Layout */
+.poster.mobile-layout {
+  width: 480px;
+  height: 600px;
+  flex-direction: column;
+}
+
+.mobile-layout .poster-side-left,
+.mobile-layout .poster-side-right {
+  gap: 6px;
+}
+
+.mobile-layout .left-top {
+  flex: 2;
+  gap: 6px;
+}
+
+.mobile-layout .left-top-left {
+  flex: 1.2;
+  background: #9b6a6c;
+  height: auto;
+}
+
+.mobile-layout .left-top-right {
+  flex: 0.8;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-layout .left-top-right-top,
+.mobile-layout .left-top-right-bottom {
+  flex: 1;
+  background: #b5838d;
+}
+
+.mobile-layout .left-bottom {
+  flex: 1;
+  background: #e5989b;
+  height: auto;
+}
+
+.mobile-layout .right-top {
+  flex: 1;
+  background: #e5989b;
+  height: auto;
+}
+
+.mobile-layout .right-bottom {
+  flex: 2;
+  gap: 6px;
+}
+
+.mobile-layout .right-bottom-left {
+  flex: 1.2;
+  background: #9b6a6c;
+}
+
+.mobile-layout .right-bottom-right {
+  flex: 0.8;
+  gap: 6px;
+}
+
+.mobile-layout .right-bottom-right a {
+  flex: 1;
+  background: #b5838d;
+}
+
+.mobile-layout a:hover {
+  transform: scale(1.15);
+  border-radius: 12px;
+}
+
+/* Animation */
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
